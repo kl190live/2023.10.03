@@ -23,8 +23,22 @@ namespace _2023._10._03
 		public int Age { get => age; set => age = value; }
 		public string Gender { get => gender; set => gender = value; }
 
+		public Person()
+		{
+			this.name = "Jane Doe";
+			this.age = 30;
+			this.gender = "female";
+		}
 
+		public string getGoal()
+		{
+			return "My goal is: Live for the moment!";
+		}
 
+		public string introduce()
+		{
+			return $"Hi, I'm {this.name}, a {this.age} year old {this.gender}.";
+		}
 
 
 	}
