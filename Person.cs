@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace _2023._10._03
 {
-	internal class Person
+	internal abstract class Person
 	{
-		private string name;
-		private int age;
-		private string gender;
+		protected string name;
+		protected int age;
+		protected string gender;
 
 		public Person(string name, int age, string gender)
 		{
@@ -19,9 +19,9 @@ namespace _2023._10._03
 			this.Gender = gender;
 		}
 
-		public string Name { get => name; set => name = value; }
-		public int Age { get => age; set => age = value; }
-		public string Gender { get => gender; set => gender = value; }
+		public virtual string Name { get => name; set => name = value; }
+		public virtual int Age { get => age; set => age = value; }
+		public virtual string Gender { get => gender; set => gender = value; }
 
 		public Person()
 		{
@@ -30,16 +30,19 @@ namespace _2023._10._03
 			this.gender = "female";
 		}
 
-		public string getGoal()
-		{
-			return "My goal is: Live for the moment!";
+		public virtual string getGoal()
+		{ 
+		return$"My goal is: Live for the moment!";
 		}
 
-		public string introduce()
+		public virtual string introduce()
 		{
-			return $"Hi, I'm {this.name}, a {this.age} year old {this.gender}.";
+			return $"Hi, I'm {this.name}, a {this.age}year old {this.gender}.";
 		}
 
-
+		public override string ToString()
+		{
+			return $"Hi, I'm {this.name}, a{this.age}year old {this.gender}";
+		}
 	}
 }
