@@ -11,6 +11,7 @@ namespace _2023._10._03
 	{
 		private string previousOrganization;
 		private int skippedDays;
+		private int numberofdays;
 
 		public Student(string previousOrganization, int skippedDays, string name, int age, string gender) : base(name,age,gender)
 		{
@@ -35,6 +36,12 @@ namespace _2023._10._03
 		public override string introduce()
 		{
 			return $"{base.introduce()} from {this.previousOrganization} who {this.skippedDays} days from the course already.";
+		}
+
+		public int skipDays()
+		{
+			int numberOfDays = this.skippedDays++;
+			return numberOfDays;
 		}
 	}
 }
