@@ -10,7 +10,19 @@ namespace _2023._10._03
 	{
 		private string name;
 		private int age;
-		private bool gender;
+		private string gender;
+
+		public Person(string name, int age, string gender)
+		{
+			this.Name = name;
+			this.Age = age;
+			this.Gender = gender;
+		}
+
+		public string Name { get => name; set => name = value; }
+		public int Age { get => age; set => age = value; }
+		public string Gender { get => gender; set => gender = value; }
+
 
 
 
